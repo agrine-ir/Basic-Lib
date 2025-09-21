@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36414.22 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agrine.Core", "Agrine.Core\Agrine.Core.csproj", "{13084520-110E-4B5A-B090-E7CB74285503}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agrine.Math", "Agrine.Math\Agrine.Math.csproj", "{D7928FE8-D76B-4FA3-B394-53EEBFB3D7FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{13084520-110E-4B5A-B090-E7CB74285503}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13084520-110E-4B5A-B090-E7CB74285503}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13084520-110E-4B5A-B090-E7CB74285503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7928FE8-D76B-4FA3-B394-53EEBFB3D7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7928FE8-D76B-4FA3-B394-53EEBFB3D7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7928FE8-D76B-4FA3-B394-53EEBFB3D7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7928FE8-D76B-4FA3-B394-53EEBFB3D7FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
