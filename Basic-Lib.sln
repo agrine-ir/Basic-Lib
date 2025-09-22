@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agrine.Core", "Agrine.Core\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agrine.Math", "Agrine.Math\Agrine.Math.vcxproj", "{4B0CAE0E-0ECA-4A49-BE92-DF0B5A10D80C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agrine.Info", "Agrine.Info\Agrine.Info.vcxproj", "{BDE90040-521F-1935-5BCE-744B20237D05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{4B0CAE0E-0ECA-4A49-BE92-DF0B5A10D80C}.Release|x64.Build.0 = Release|x64
 		{4B0CAE0E-0ECA-4A49-BE92-DF0B5A10D80C}.Release|x86.ActiveCfg = Release|Win32
 		{4B0CAE0E-0ECA-4A49-BE92-DF0B5A10D80C}.Release|x86.Build.0 = Release|Win32
+		{BDE90040-521F-1935-5BCE-744B20237D05}.Debug|x64.ActiveCfg = Debug|x64
+		{BDE90040-521F-1935-5BCE-744B20237D05}.Debug|x64.Build.0 = Debug|x64
+		{BDE90040-521F-1935-5BCE-744B20237D05}.Debug|x86.ActiveCfg = Debug|Win32
+		{BDE90040-521F-1935-5BCE-744B20237D05}.Debug|x86.Build.0 = Debug|Win32
+		{BDE90040-521F-1935-5BCE-744B20237D05}.Release|x64.ActiveCfg = Release|x64
+		{BDE90040-521F-1935-5BCE-744B20237D05}.Release|x64.Build.0 = Release|x64
+		{BDE90040-521F-1935-5BCE-744B20237D05}.Release|x86.ActiveCfg = Release|Win32
+		{BDE90040-521F-1935-5BCE-744B20237D05}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
