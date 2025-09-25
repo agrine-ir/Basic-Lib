@@ -139,6 +139,7 @@
     <ClInclude Include="CmdExecutor.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PowerShellExecutor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
