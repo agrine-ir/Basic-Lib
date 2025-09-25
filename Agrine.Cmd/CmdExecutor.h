@@ -1,7 +1,10 @@
 #pragma once
-#include <string>
+#include "ICommandExecutor.h"
 
-class CmdExecutor {
+/**
+ * @brief Executes commands using the standard Windows Command Prompt (cmd.exe)
+ */
+class CmdExecutor : public ICommandExecutor {
 public:
-    static std::string RunCommand(const std::string& command);
+    std::string Execute(const std::string& command) override;
 };
