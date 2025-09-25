@@ -3,7 +3,12 @@
 
 #include <cstdio>
 
-std::string CmdExecutor::RunCommand(const std::string& command) {
+/**
+ * @brief Execute a command in Windows CMD
+ * @param command Command string
+ * @return Output from CMD execution
+ */
+std::string CmdExecutor::Execute(const std::string& command) {
     char buffer[256];
     std::string result;
 
