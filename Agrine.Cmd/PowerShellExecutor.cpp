@@ -2,7 +2,13 @@
 #include "PowerShellExecutor.h"
 #include "CmdExecutor.h"
 
-std::string PowerShellExecutor::RunCommand(const std::string& command) {
+/**
+ * @brief Executes a PowerShell command by wrapping it for CMD execution
+ * @param command Command string
+ * @return Output from PowerShell execution
+ */
+std::string PowerShellExecutor::Execute(const std::string& command) {
+    CmdExecutor executor;
     std::string psCommand = "powershell -Command \"" + command + "\"";
-    return CmdExecutor::RunCommand(psCommand);
+    return executor.Execute(psCommand);
 }
