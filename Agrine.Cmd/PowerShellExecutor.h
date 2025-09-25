@@ -1,7 +1,10 @@
 #pragma once
-#include <string>
+#include "ICommandExecutor.h"
 
-class PowerShellExecutor {
+/**
+ * @brief Executes commands using Windows PowerShell
+ */
+class PowerShellExecutor : public ICommandExecutor {
 public:
-    static std::string RunCommand(const std::string& command);
+    std::string Execute(const std::string& command) override;
 };
