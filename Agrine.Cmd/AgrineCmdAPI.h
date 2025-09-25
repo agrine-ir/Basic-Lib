@@ -8,6 +8,18 @@
 #endif
 
 extern "C" {
-    AGRINECMD_API const char* RunCmd(const char* command);
-    AGRINECMD_API const char* RunPowerShell(const char* command);
+
+	/**
+	 * @brief Runs a CMD command.
+	 * @param command Command string
+	 * @return Pointer to result string (needs copying in managed code)
+	 */
+	AGRINECMD_API const char* RunCmd(const char* command);
+
+	/**
+	 * @brief Runs a PowerShell command.
+	 * @param command Command string
+	 * @return Pointer to result string (needs copying in managed code)
+	 */
+	AGRINECMD_API const char* RunPowerShell(const char* command);
 }
