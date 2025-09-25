@@ -138,6 +138,7 @@
     <ClInclude Include="AgrineCmdAPI.h" />
     <ClInclude Include="CmdExecutor.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="ICommandExecutor.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PowerShellExecutor.h" />
   </ItemGroup>
