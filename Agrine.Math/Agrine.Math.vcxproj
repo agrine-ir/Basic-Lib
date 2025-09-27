@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Algebra.cpp" />
+    <ClCompile Include="Complex.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="Linalg.cpp" />
