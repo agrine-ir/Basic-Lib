@@ -1,1 +1,6 @@
-#pragma once
+#include "Algebra.h"
+#include "Geometry.h"
+#include "Linalg.h"
+#include "Statistics.h"
+#include "Complex.h"
+#include "Utils.h"
