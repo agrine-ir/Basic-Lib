@@ -33,7 +33,7 @@
     <ClInclude Include="Geometry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LinearAlgebra.h">
+    <ClInclude Include="Linalg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
