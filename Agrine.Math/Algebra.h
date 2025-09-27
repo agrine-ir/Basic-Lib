@@ -1,33 +1,42 @@
 #pragma once
 #include "MathCore.h"
-#include <cstdint> // For integer types like int64_t
 
-// ============================================================
-// Algebra Module - Basic Arithmetic and Elementary Operations
-// ============================================================
-// This module provides fundamental arithmetic operations
-// such as addition, subtraction, multiplication, division,
-// exponentiation, and factorial.
-// All functions are exported for external use in C# and other projects.
-// ============================================================
+/**
+ * ============================================================
+ * Algebra Module - Agrine.Math
+ * ============================================================
+ * This module provides both basic and advanced algebraic operations:
+ * - Basic arithmetic
+ * - Power and factorial functions
+ * - Logarithmic and exponential functions
+ * - Numerical derivative and limit calculations
+ * - Solving linear equations (simple cases)
+ * - Polynomial evaluation
+ * ============================================================
+ */
 
 extern "C"
 {
-    // Addition of two real numbers
+    // Basic Arithmetic
     AGRINE_API double Add(double a, double b);
-
-    // Subtraction of two real numbers
     AGRINE_API double Subtract(double a, double b);
-
-    // Multiplication of two real numbers
     AGRINE_API double Multiply(double a, double b);
-
-    // Division of two real numbers (returns 0 if division by zero occurs)
     AGRINE_API double Divide(double a, double b);
 
-    // Exponentiation (base^exponent)
+    // Advanced Arithmetic
     AGRINE_API double Power(double base, double exponent);
-
-    // Factorial of a non-negative integer (n!)
     AGRINE_API int64_t Factorial(int n);
+    AGRINE_API double Logarithm(double value, double base);
+    AGRINE_API double Exponential(double exponent);
+
+    // Numerical Calculus
+    AGRINE_API double Derivative(double (*func)(double), double x, double h);
+    AGRINE_API double Limit(double (*func)(double), double x, double h);
+
+    // Polynomial Functions
+    AGRINE_API double EvaluatePolynomial(const double* coefficients, size_t degree, double x);
+
+    // Linear Equation Solver (simple Ax = b for 2x2 and 3x3 cases)
+    AGRINE_API bool SolveLinear2x2(const double* A, const double* b, double* x);
+    AGRINE_API bool SolveLinear3x3(const double* A, const double* b, double* x);
 }
