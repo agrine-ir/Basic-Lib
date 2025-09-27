@@ -1,19 +1,6 @@
 #pragma once
-
-// ============================================================
-// Geometry.h - Geometry Module for Agrine.Math Library
-// ============================================================
-//
-// This header defines advanced geometry functions, including
-// distance calculations, area computations, vector operations,
-// coordinate transformations, and more.
-//
-// Uses mathematical constants from Agrine.Math.Constants.
-// ============================================================
-
 #include "MathCore.h"
 #include "Constants.h"
-#include <cmath>
 #include <array>
 
 namespace Agrine
@@ -22,53 +9,68 @@ namespace Agrine
     {
         namespace Geometry
         {
-            // ----------------------------
-            // Basic Geometry Functions
-            // ----------------------------
+            // ================================
+            // Geometry - Advanced 2D & 3D Operations
+            // ================================
 
-            /// <summary>
-            /// Calculate the Euclidean distance between two points in 2D space.
-            /// </summary>
+            // ----------------------------
+            // Distance Calculations
+            // ----------------------------
             AGRINE_API double Distance2D(double x1, double y1, double x2, double y2);
-
-            /// <summary>
-            /// Calculate the Euclidean distance between two points in 3D space.
-            /// </summary>
             AGRINE_API double Distance3D(double x1, double y1, double z1,
                 double x2, double y2, double z2);
 
-            /// <summary>
-            /// Calculate the area of a triangle given its three vertices in 2D.
-            /// </summary>
-            AGRINE_API double TriangleArea(double x1, double y1,
-                double x2, double y2,
-                double x3, double y3);
+            // ----------------------------
+            // Triangle Calculations
+            // ----------------------------
+            AGRINE_API double TriangleArea(double a, double b, double c); // Using Heron's formula
 
             // ----------------------------
-            // Advanced Geometry Functions
+            // Volume and Surface Area Calculations
             // ----------------------------
+            AGRINE_API double CubeVolume(double side);
+            AGRINE_API double CubeSurfaceArea(double side);
 
-            /// <summary>
-            /// Rotate a 2D point (x, y) around the origin by a given angle in degrees.
-            /// </summary>
-            AGRINE_API std::array<double, 2> RotatePoint2D(double x, double y, double angleDegrees);
+            AGRINE_API double SphereVolume(double radius);
+            AGRINE_API double SphereSurfaceArea(double radius);
 
-            /// <summary>
-            /// Convert Cartesian coordinates (x, y, z) to spherical coordinates (r, theta, phi).
-            /// Theta: inclination, Phi: azimuth.
-            /// </summary>
-            AGRINE_API std::array<double, 3> CartesianToSpherical(double x, double y, double z);
+            AGRINE_API double CylinderVolume(double radius, double height);
+            AGRINE_API double CylinderSurfaceArea(double radius, double height);
 
-            /// <summary>
-            /// Convert spherical coordinates (r, theta, phi) to Cartesian coordinates (x, y, z).
-            /// </summary>
-            AGRINE_API std::array<double, 3> SphericalToCartesian(double r, double theta, double phi);
+            AGRINE_API double ConeVolume(double radius, double height);
+            AGRINE_API double ConeSurfaceArea(double radius, double height);
 
-            /// <summary>
-            /// Calculate the angle between two vectors in degrees.
-            /// </summary>
-            AGRINE_API double AngleBetweenVectors(const std::array<double, 3>& v1,
+            AGRINE_API double RectangularPrismVolume(double length, double width, double height);
+            AGRINE_API double RectangularPrismSurfaceArea(double length, double width, double height);
+
+            // ----------------------------
+            // Vector and 3D Operations
+            // ----------------------------
+            AGRINE_API std::array<double, 3> CrossProduct(const std::array<double, 3>& v1,
                 const std::array<double, 3>& v2);
-        }
+
+            AGRINE_API std::array<double, 3> NormalizeVector(const std::array<double, 3>& v);
+
+            AGRINE_API double DotProduct(const std::array<double, 3>& v1,
+                const std::array<double, 3>& v2);
+
+            AGRINE_API std::array<double, 3> ProjectVector(const std::array<double, 3>& v,
+                const std::array<double, 3>& onto);
+
+            // ----------------------------
+            // 3D Rotations
+            // ----------------------------
+            AGRINE_API std::array<double, 3> RotateAroundX(const std::array<double, 3>& point, double angleDegrees);
+            AGRINE_API std::array<double, 3> RotateAroundY(const std::array<double, 3>& point, double angleDegrees);
+            AGRINE_API std::array<double, 3> RotateAroundZ(const std::array<double, 3>& point, double angleDegrees);
+
+            // ----------------------------
+            // Plane Operations
+            // ----------------------------
+            AGRINE_API double DistancePointToPlane(const std::array<double, 3>& point,
+                const std::array<double, 3>& planePoint,
+                const std::array<double, 3>& planeNormal);
+
+        } // namespace Geometry
     }
 }
