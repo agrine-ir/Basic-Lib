@@ -142,6 +142,7 @@
     <ClInclude Include="Linalg.h" />
     <ClInclude Include="MathCore.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Statistics.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
