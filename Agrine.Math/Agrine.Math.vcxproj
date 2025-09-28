@@ -123,6 +123,7 @@
     <ClInclude Include="Constants.h" />
     <ClInclude Include="Differentiation.h" />
     <ClInclude Include="Exceptions.h" />
+    <ClInclude Include="Integration.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Polynomial.h" />

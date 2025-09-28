@@ -57,6 +57,9 @@
     <ClInclude Include="Differentiation.h">
       <Filter>Header Files\Calculus</Filter>
     </ClInclude>
+    <ClInclude Include="Integration.h">
+      <Filter>Header Files\Calculus</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp">
