@@ -124,6 +124,7 @@
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Polynomial.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Utils.h" />

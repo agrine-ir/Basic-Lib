@@ -48,6 +48,9 @@
     <ClInclude Include="Matrix.h">
       <Filter>Header Files\Algebra</Filter>
     </ClInclude>
+    <ClInclude Include="Polynomial.h">
+      <Filter>Header Files\Algebra</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp">
