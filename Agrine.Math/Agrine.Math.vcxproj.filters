@@ -90,6 +90,9 @@
     <ClInclude Include="Distributions.h">
       <Filter>Header Files\Probability</Filter>
     </ClInclude>
+    <ClInclude Include="Statistics.h">
+      <Filter>Header Files\Probability</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp">

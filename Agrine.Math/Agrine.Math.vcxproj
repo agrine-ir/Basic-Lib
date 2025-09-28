@@ -135,6 +135,7 @@
     <ClInclude Include="Randgen.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Series.h" />
+    <ClInclude Include="Statistics.h" />
     <ClInclude Include="Topology.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Utils.h" />
