@@ -19,6 +19,9 @@
     <Filter Include="Header Files\Algebra">
       <UniqueIdentifier>{2d008932-3cfa-4cec-9b0f-60d6665a4d68}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Calculus">
+      <UniqueIdentifier>{259a7768-8269-4ad1-b754-ceb0c9438006}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.Math.h">
