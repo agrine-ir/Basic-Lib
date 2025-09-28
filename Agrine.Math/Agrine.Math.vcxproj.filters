@@ -60,6 +60,9 @@
     <ClInclude Include="Integration.h">
       <Filter>Header Files\Calculus</Filter>
     </ClInclude>
+    <ClInclude Include="Series.h">
+      <Filter>Header Files\Calculus</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp">
