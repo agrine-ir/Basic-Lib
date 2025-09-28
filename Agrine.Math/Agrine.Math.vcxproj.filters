@@ -25,6 +25,9 @@
     <Filter Include="Header Files\Geometry">
       <UniqueIdentifier>{81954f64-5688-46b7-a110-c054947e03b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Probability">
+      <UniqueIdentifier>{a75eca84-4fc8-4f67-a756-1d1d6ca32dc2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.Math.h">
