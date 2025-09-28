@@ -133,6 +133,7 @@
     <ClInclude Include="Polynomial.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Series.h" />
+    <ClInclude Include="Topology.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="Vector.h" />
