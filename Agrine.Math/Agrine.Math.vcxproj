@@ -122,6 +122,7 @@
     <ClInclude Include="Agrine.Math.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Types.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp" />
