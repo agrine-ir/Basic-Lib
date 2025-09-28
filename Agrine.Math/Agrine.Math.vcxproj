@@ -126,6 +126,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp" />

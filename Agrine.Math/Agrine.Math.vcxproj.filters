@@ -42,6 +42,9 @@
     <ClInclude Include="Exceptions.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header Files\Algebra</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp">
