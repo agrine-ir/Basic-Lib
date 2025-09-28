@@ -28,6 +28,9 @@
     <Filter Include="Header Files\Probability">
       <UniqueIdentifier>{a75eca84-4fc8-4f67-a756-1d1d6ca32dc2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Advanced">
+      <UniqueIdentifier>{60453264-89a2-4edb-832e-1bb97a1a6ebd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.Math.h">
