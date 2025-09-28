@@ -54,6 +54,9 @@
     <ClInclude Include="Polynomial.h">
       <Filter>Header Files\Algebra</Filter>
     </ClInclude>
+    <ClInclude Include="Differentiation.h">
+      <Filter>Header Files\Calculus</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp">
