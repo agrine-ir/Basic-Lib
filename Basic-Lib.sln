@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agrine.Cmd", "Agrine.Cmd\Ag
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Agrine.Math", "Agrine.Math\Agrine.Math.vcxproj", "{A3C97D96-C699-2860-5CAA-3465EBBF21B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPro", "TestPro\TestPro.csproj", "{3260213C-4A9F-4398-9F37-DA93E92E1370}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{A3C97D96-C699-2860-5CAA-3465EBBF21B2}.Release|x64.Build.0 = Release|x64
 		{A3C97D96-C699-2860-5CAA-3465EBBF21B2}.Release|x86.ActiveCfg = Release|Win32
 		{A3C97D96-C699-2860-5CAA-3465EBBF21B2}.Release|x86.Build.0 = Release|Win32
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Debug|x64.Build.0 = Debug|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Debug|x86.Build.0 = Debug|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Release|x64.ActiveCfg = Release|x64
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Release|x64.Build.0 = Release|x64
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Release|x86.ActiveCfg = Release|Any CPU
+		{3260213C-4A9F-4398-9F37-DA93E92E1370}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
