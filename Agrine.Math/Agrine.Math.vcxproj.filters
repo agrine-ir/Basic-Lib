@@ -108,6 +108,9 @@
     <ClInclude Include="Numerics.h">
       <Filter>Header Files\Advanced</Filter>
     </ClInclude>
+    <ClInclude Include="Optimization.h">
+      <Filter>Header Files\Advanced</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp">
