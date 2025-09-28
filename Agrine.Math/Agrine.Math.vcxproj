@@ -121,6 +121,7 @@
   <ItemGroup>
     <ClInclude Include="Agrine.Math.h" />
     <ClInclude Include="Analytic.h" />
+    <ClInclude Include="Computational.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="DiffEq.h" />
     <ClInclude Include="Differentiation.h" />
