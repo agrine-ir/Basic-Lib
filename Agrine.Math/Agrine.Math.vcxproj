@@ -130,6 +130,7 @@
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Fourier.h" />
     <ClInclude Include="Integration.h" />
+    <ClInclude Include="Laplace.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Polynomial.h" />
