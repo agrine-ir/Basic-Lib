@@ -125,6 +125,7 @@
     <ClInclude Include="Constants.h" />
     <ClInclude Include="DiffEq.h" />
     <ClInclude Include="Differentiation.h" />
+    <ClInclude Include="Distributions.h" />
     <ClInclude Include="Euclidean.h" />
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Integration.h" />
