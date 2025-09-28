@@ -133,6 +133,7 @@
     <ClInclude Include="Integration.h" />
     <ClInclude Include="Laplace.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Numerics.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Polynomial.h" />
     <ClInclude Include="Randgen.h" />

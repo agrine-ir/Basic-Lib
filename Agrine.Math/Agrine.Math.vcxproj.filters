@@ -105,6 +105,9 @@
     <ClInclude Include="Complex.h">
       <Filter>Header Files\Advanced</Filter>
     </ClInclude>
+    <ClInclude Include="Numerics.h">
+      <Filter>Header Files\Advanced</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp">
