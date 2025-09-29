@@ -140,6 +140,9 @@
     <ClCompile Include="Matrix.cpp">
       <Filter>Source Files\Algebra</Filter>
     </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files\Algebra</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
