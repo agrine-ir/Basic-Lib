@@ -151,6 +151,7 @@
     <ClCompile Include="Analytic.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Complex.cpp" />
+    <ClCompile Include="Computational.cpp" />
     <ClCompile Include="DiffEq.cpp" />
     <ClCompile Include="Differentiation.cpp" />
     <ClCompile Include="Fourier.cpp" />
