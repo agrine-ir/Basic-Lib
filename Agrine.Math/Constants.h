@@ -29,6 +29,7 @@ namespace Agrine {
                 literal double Epsilon = 1e-12;                      // Small threshold for comparisons
                 literal double Tolerance = 1e-9;                       // Default numerical tolerance
 
+
                 // Conversion factors (explicit)
                 literal double Deg2Rad = 0.01745329251994329576923690768489; // Pi / 180
                 literal double Rad2Deg = 57.295779513082320876798154814105;  // 180 / Pi

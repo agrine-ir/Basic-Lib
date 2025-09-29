@@ -5,7 +5,8 @@
 
 using namespace System;
 
-#include "Agrine.Math.h"
+#include "Constants.h"
+
 
 namespace Agrine {
     namespace Math {

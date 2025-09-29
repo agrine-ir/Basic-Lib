@@ -10,19 +10,6 @@ namespace Agrine {
         namespace Core {
 
             /// <summary>
-            /// Common mathematical constants.
-            /// </summary>
-            public ref class Constants abstract sealed
-            {
-            public:
-                literal double Pi = 3.14159265358979323846;
-                literal double E = 2.71828182845904523536;
-                literal double GoldenR = 1.61803398874989484820; // φ
-                literal double Sqrt2 = 1.41421356237309504880;
-                literal double Epsilon = 1e-12; // Precision threshold
-            };
-
-            /// <summary>
             /// Basic 2D point structure.
             /// Useful for geometry and vector operations.
             /// </summary>
