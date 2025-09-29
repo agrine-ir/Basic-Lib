@@ -8,5 +8,11 @@
 #define PCH_H
 
 // add headers that you want to pre-compile here
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cmath>
+using namespace System;
+
 
 #endif //PCH_H
