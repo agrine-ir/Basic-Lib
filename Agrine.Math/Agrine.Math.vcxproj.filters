@@ -158,6 +158,9 @@
     <ClCompile Include="Series.cpp">
       <Filter>Source Files\Calculus</Filter>
     </ClCompile>
+    <ClCompile Include="Complex.cpp">
+      <Filter>Source Files\Advanced</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">

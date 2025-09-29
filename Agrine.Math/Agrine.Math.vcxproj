@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="Agrine.Math.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Complex.cpp" />
     <ClCompile Include="DiffEq.cpp" />
     <ClCompile Include="Differentiation.cpp" />
     <ClCompile Include="Integration.cpp" />
