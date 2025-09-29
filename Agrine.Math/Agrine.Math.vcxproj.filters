@@ -173,6 +173,9 @@
     <ClCompile Include="Optimization.cpp">
       <Filter>Source Files\Advanced</Filter>
     </ClCompile>
+    <ClCompile Include="Analytic.cpp">
+      <Filter>Source Files\Geometry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
