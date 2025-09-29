@@ -191,6 +191,9 @@
     <ClCompile Include="Randgen.cpp">
       <Filter>Source Files\Probability</Filter>
     </ClCompile>
+    <ClCompile Include="Statistics.cpp">
+      <Filter>Source Files\Probability</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">

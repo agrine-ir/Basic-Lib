@@ -171,6 +171,7 @@
     <ClCompile Include="Polynomial.cpp" />
     <ClCompile Include="Randgen.cpp" />
     <ClCompile Include="Series.cpp" />
+    <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="Topology.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
