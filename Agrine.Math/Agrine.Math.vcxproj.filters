@@ -37,6 +37,9 @@
     <Filter Include="Source Files\Calculus">
       <UniqueIdentifier>{67d6f0d3-c224-4ffb-a23c-79214c94acee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Probability">
+      <UniqueIdentifier>{6a6f1b33-47f7-4add-9538-0d9bace26c31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.Math.h">
