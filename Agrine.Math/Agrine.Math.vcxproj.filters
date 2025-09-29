@@ -34,6 +34,9 @@
     <Filter Include="Source Files\Algebra">
       <UniqueIdentifier>{4600f22c-aa14-43b6-9300-871c1804a5e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Calculus">
+      <UniqueIdentifier>{67d6f0d3-c224-4ffb-a23c-79214c94acee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.Math.h">
