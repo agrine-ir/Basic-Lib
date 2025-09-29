@@ -155,6 +155,9 @@
     <ClCompile Include="Integration.cpp">
       <Filter>Source Files\Calculus</Filter>
     </ClCompile>
+    <ClCompile Include="Series.cpp">
+      <Filter>Source Files\Calculus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
