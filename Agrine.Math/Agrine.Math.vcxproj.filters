@@ -164,6 +164,9 @@
     <ClCompile Include="Fourier.cpp">
       <Filter>Source Files\Advanced</Filter>
     </ClCompile>
+    <ClCompile Include="Laplace.cpp">
+      <Filter>Source Files\Advanced</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
