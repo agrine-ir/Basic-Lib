@@ -146,6 +146,9 @@
     <ClCompile Include="Polynomial.cpp">
       <Filter>Source Files\Algebra</Filter>
     </ClCompile>
+    <ClCompile Include="DiffEq.cpp">
+      <Filter>Source Files\Calculus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
