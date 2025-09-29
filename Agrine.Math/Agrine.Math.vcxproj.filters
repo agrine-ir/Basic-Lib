@@ -43,6 +43,9 @@
     <Filter Include="Source Files\Advanced">
       <UniqueIdentifier>{10584255-5606-480e-af14-1da54af80e6e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Geometry">
+      <UniqueIdentifier>{e070783d-55e8-44e1-bfa5-aa0a1e9bca39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.Math.h">
