@@ -167,6 +167,9 @@
     <ClCompile Include="Laplace.cpp">
       <Filter>Source Files\Advanced</Filter>
     </ClCompile>
+    <ClCompile Include="Numerics.cpp">
+      <Filter>Source Files\Advanced</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
