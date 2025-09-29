@@ -154,6 +154,7 @@
     <ClCompile Include="Computational.cpp" />
     <ClCompile Include="DiffEq.cpp" />
     <ClCompile Include="Differentiation.cpp" />
+    <ClCompile Include="Euclidean.cpp" />
     <ClCompile Include="Fourier.cpp" />
     <ClCompile Include="Integration.cpp" />
     <ClCompile Include="Laplace.cpp" />
