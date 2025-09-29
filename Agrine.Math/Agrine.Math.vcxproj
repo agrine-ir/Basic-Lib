@@ -169,6 +169,7 @@
     </ClCompile>
     <ClCompile Include="Polynomial.cpp" />
     <ClCompile Include="Series.cpp" />
+    <ClCompile Include="Topology.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
