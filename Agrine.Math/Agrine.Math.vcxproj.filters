@@ -185,6 +185,9 @@
     <ClCompile Include="Topology.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
+    <ClCompile Include="Distributions.cpp">
+      <Filter>Source Files\Probability</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
