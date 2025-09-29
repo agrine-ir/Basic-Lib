@@ -152,6 +152,9 @@
     <ClCompile Include="Differentiation.cpp">
       <Filter>Source Files\Calculus</Filter>
     </ClCompile>
+    <ClCompile Include="Integration.cpp">
+      <Filter>Source Files\Calculus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
