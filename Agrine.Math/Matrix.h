@@ -3,6 +3,7 @@
 // Matrix.h - Algebra module
 // Part of Agrine.Math (C++/CLI, .NET Framework 4.6.2)
 
+
 #include "Vector.h"
 
 using namespace System;

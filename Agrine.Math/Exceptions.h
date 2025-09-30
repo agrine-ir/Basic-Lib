@@ -59,6 +59,8 @@ namespace Agrine {
 				}
 			};
 
+			
+
 			/// <summary>
 			/// Exception thrown when a numerical method fails to converge.
 			/// </summary>
