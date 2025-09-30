@@ -7,37 +7,32 @@ namespace Agrine {
     namespace Math {
         namespace Algebra {
 
-            // Constructor: initialize vector with given dimension
-            Vector::Vector(int dimension)
+            // ===== Constructors =====
+            Vector::Vector(int dim)
             {
-                if (dimension <= 0)
+                if (dim <= 0)
                     throw gcnew ArgumentException("Dimension must be positive.");
 
-                this->dimension = dimension;
-                data = gcnew array<double>(dimension);
-
-                for (int i = 0; i < dimension; i++)
-                    data[i] = 0.0;
+                this->dimension = dim;
+                this->data = gcnew array<double>(dim);
             }
 
-            // Constructor: initialize vector with given array
             Vector::Vector(array<double>^ values)
             {
                 if (values == nullptr || values->Length == 0)
                     throw gcnew ArgumentException("Values array cannot be null or empty.");
 
-                dimension = values->Length;
-                data = gcnew array<double>(dimension);
-                Array::Copy(values, data, dimension);
+                this->dimension = values->Length;
+                this->data = gcnew array<double>(dimension);
+                Array::Copy(values, this->data, dimension);
             }
 
-            // Get dimension of vector
+            // ===== Properties =====
             int Vector::Dimension::get()
             {
-                return dimension;
+                return this->dimension;
             }
 
-            // Indexer
             double Vector::default::get(int index)
             {
                 if (index < 0 || index >= dimension)
@@ -52,7 +47,13 @@ namespace Agrine {
                 data[index] = value;
             }
 
-            // Vector addition
+            // ===== Utility =====
+            Vector^ Vector::Clone()
+            {
+                return gcnew Vector(this->data);
+            }
+
+            // ===== Basic operations =====
             Vector^ Vector::Add(Vector^ other)
             {
                 if (this->dimension != other->dimension)
@@ -65,7 +66,6 @@ namespace Agrine {
                 return gcnew Vector(result);
             }
 
-            // Vector subtraction
             Vector^ Vector::Subtract(Vector^ other)
             {
                 if (this->dimension != other->dimension)
@@ -78,7 +78,15 @@ namespace Agrine {
                 return gcnew Vector(result);
             }
 
-            // Dot product
+            Vector^ Vector::Multiply(double scalar)
+            {
+                array<double>^ result = gcnew array<double>(dimension);
+                for (int i = 0; i < dimension; i++)
+                    result[i] = this->data[i] * scalar;
+
+                return gcnew Vector(result);
+            }
+
             double Vector::Dot(Vector^ other)
             {
                 if (this->dimension != other->dimension)
@@ -91,17 +99,37 @@ namespace Agrine {
                 return sum;
             }
 
-            // Norm (magnitude)
+            // ===== Advanced operations =====
             double Vector::Norm()
             {
                 double sum = 0.0;
                 for (int i = 0; i < dimension; i++)
                     sum += data[i] * data[i];
 
-                return Math::Sqrt(sum);
+                return System::Math::Sqrt(sum);
             }
 
-            // Equality check with tolerance
+            Vector^ Vector::Normalize()
+            {
+                double n = Norm();
+                if (Utils::IsZero(n))
+                    throw gcnew DivideByZeroException("Cannot normalize a zero vector.");
+
+                return Multiply(1.0 / n);
+            }
+
+            double Vector::Angle(Vector^ a, Vector^ b)
+            {
+                double dot = a->Dot(b);
+                double denom = a->Norm() * b->Norm();
+                if (Utils::IsZero(denom))
+                    throw gcnew DivideByZeroException("Cannot compute angle with zero vector.");
+
+                double cosTheta = dot / denom;
+                cosTheta = Utils::Clamp(cosTheta, -1.0, 1.0); // safe clamp
+                return System::Math::Acos(cosTheta);
+            }
+
             bool Vector::AreEqual(Vector^ a, Vector^ b, double tol)
             {
                 if (a->Dimension != b->Dimension)
@@ -109,21 +137,20 @@ namespace Agrine {
 
                 for (int i = 0; i < a->Dimension; i++)
                 {
-                    if (Math::Abs(a[i] - b[i]) > tol)
+                    if (!Utils::AreEqual(a[i], b[i], tol))
                         return false;
                 }
-
                 return true;
             }
 
-            // ToString override for nice output
+            // ===== ToString =====
             String^ Vector::ToString()
             {
                 array<String^>^ elems = gcnew array<String^>(dimension);
                 for (int i = 0; i < dimension; i++)
                     elems[i] = data[i].ToString("G5");
 
-                return "[" + String::Join(", ", elems) + "]";
+                return String::Format("Vector({0})", String::Join(", ", elems));
             }
 
         } // namespace Algebra
