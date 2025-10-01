@@ -49,7 +49,7 @@ namespace Agrine {
                 // Private helpers for adaptive Simpson
                 static double SimpsonEstimate(Func<double, double>^ f, double a, double b);
                 static double AdaptiveSimpsonRecursive(Func<double, double>^ f, double a, double b, double eps, double whole, int depth);
-                literal static int MAX_ADAPTIVE_RECURSION = 20;
+                literal int MAX_ADAPTIVE_RECURSION = 20;
             };
         }
     }
