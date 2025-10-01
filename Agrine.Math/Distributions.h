@@ -40,8 +40,9 @@ namespace Agrine {
                 static int    PoissonSample(double lambda);
 
             private:
-                static Random^ rng; // shared random generator
-                static Distributions() { rng = gcnew Random(); }
+                // random generator (lazy initialized)
+                static Random^ rng;
+                static Random^ GetRng();
             };
 
         } // namespace Probability
