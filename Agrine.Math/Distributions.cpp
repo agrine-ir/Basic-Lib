@@ -1,5 +1,5 @@
 #include "Distributions.h"
-#include <math.h>
+#include <cmath> // for std::erf
 
 using namespace System;
 using namespace Agrine::Math::Core;
@@ -8,7 +8,18 @@ namespace Agrine {
     namespace Math {
         namespace Probability {
 
-            Random^ Distributions::rng = gcnew Random();
+            // define static handle (initialized to nullptr)
+            Random^ Distributions::rng = nullptr;
+
+            // lazy initializer for rng
+            Random^ Distributions::GetRng()
+            {
+                if (rng == nullptr) {
+                    // Optionally you can seed with Environment::TickCount or similar
+                    rng = gcnew Random();
+                }
+                return rng;
+            }
 
             // ---------------- Uniform(a,b) ----------------
             double Distributions::UniformPDF(double x, double a, double b)
@@ -28,7 +39,7 @@ namespace Agrine {
             double Distributions::UniformSample(double a, double b)
             {
                 if (a >= b) throw gcnew InvalidArgumentException("Uniform: a must be < b.");
-                double u = rng->NextDouble(); // [0,1)
+                double u = GetRng()->NextDouble(); // [0,1)
                 return a + u * (b - a);
             }
 
@@ -37,26 +48,28 @@ namespace Agrine {
             {
                 if (sigma <= 0) throw gcnew InvalidArgumentException("Normal: sigma must be > 0.");
                 double z = (x - mu) / sigma;
-                return (1.0 / (sigma * System::Math::Sqrt(2 * Constants::Pi))) * System::Math::Exp(-0.5 * z * z);
+                return (1.0 / (sigma * System::Math::Sqrt(2.0 * Constants::Pi))) * System::Math::Exp(-0.5 * z * z);
             }
 
-            // Approximate Normal CDF using error function
+            // Approximate Normal CDF using std::erf
             double Distributions::NormalCDF(double x, double mu, double sigma)
             {
                 if (sigma <= 0) throw gcnew InvalidArgumentException("Normal: sigma must be > 0.");
-                double z = (x - mu) / (sigma * System::Math::Sqrt(2.0));
-                return 0.5 * (1.0 + System::Math::Erf(z));
+                double z = (x - mu) / (sigma * std::sqrt(2.0));
+                return 0.5 * (1.0 + std::erf(z));
             }
 
             double Distributions::NormalSample(double mu, double sigma)
             {
                 if (sigma <= 0) throw gcnew InvalidArgumentException("Normal: sigma must be > 0.");
                 // Box-Muller transform
-                double u1 = rng->NextDouble();
-                double u2 = rng->NextDouble();
-                double r = System::Math::Sqrt(-2.0 * System::Math::Log(u1));
+                double u1 = GetRng()->NextDouble();
+                double u2 = GetRng()->NextDouble();
+                // guard against u1 == 0
+                if (u1 < 1e-300) u1 = 1e-300;
+                double r = std::sqrt(-2.0 * std::log(u1));
                 double theta = 2.0 * Constants::Pi * u2;
-                double z = r * System::Math::Cos(theta);
+                double z = r * std::cos(theta);
                 return mu + sigma * z;
             }
 
@@ -67,13 +80,13 @@ namespace Agrine {
                 if (p < 0 || p > 1) throw gcnew InvalidArgumentException("Binomial: p must be in [0,1].");
                 if (k < 0 || k > n) return 0.0;
 
-                // Compute C(n,k)
-                double logC = 0;
+                // Compute C(n,k) robustly via logs to reduce overflow
+                double logC = 0.0;
                 for (int i = 1; i <= k; ++i) {
                     logC += System::Math::Log((n - k + i) / (double)i);
                 }
                 double coeff = System::Math::Exp(logC);
-                return coeff * System::Math::Pow(p, k) * System::Math::Pow(1 - p, n - k);
+                return coeff * System::Math::Pow(p, k) * System::Math::Pow(1.0 - p, n - k);
             }
 
             double Distributions::BinomialCDF(int k, int n, double p)
@@ -89,7 +102,7 @@ namespace Agrine {
                 if (p < 0 || p > 1) throw gcnew InvalidArgumentException("Binomial: p must be in [0,1].");
                 int count = 0;
                 for (int i = 0; i < n; ++i) {
-                    if (rng->NextDouble() < p) count++;
+                    if (GetRng()->NextDouble() < p) count++;
                 }
                 return count;
             }
@@ -114,12 +127,12 @@ namespace Agrine {
             {
                 if (lambda <= 0) throw gcnew InvalidArgumentException("Poisson: lambda must be > 0.");
                 // Knuth's algorithm
-                double L = System::Math::Exp(-lambda);
+                double L = std::exp(-lambda);
                 int k = 0;
                 double p = 1.0;
                 do {
                     k++;
-                    p *= rng->NextDouble();
+                    p *= GetRng()->NextDouble();
                 } while (p > L);
                 return k - 1;
             }
