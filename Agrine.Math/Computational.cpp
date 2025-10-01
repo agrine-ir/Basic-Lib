@@ -23,7 +23,7 @@ namespace Agrine {
             }
 
             // Cross product (OA x OB) where O,A,B are points
-            double Computational::Cross(const Point2D& O, const Point2D& A, const Point2D& B)
+            double Computational::Cross(Point2D O, Point2D A, Point2D B)
             {
                 double ax = A.X - O.X;
                 double ay = A.Y - O.Y;
@@ -31,6 +31,7 @@ namespace Agrine {
                 double by = B.Y - O.Y;
                 return ax * by - ay * bx;
             }
+
 
             // On-segment: check if p lies on segment ab (assumes collinear)
             bool Computational::OnSegment(Point2D a, Point2D b, Point2D p)
@@ -170,15 +171,34 @@ namespace Agrine {
 
                 // If collinear overlap (we may have 2 endpoints), sort them along the segment and return endpoints of overlap
                 if (uniq->Count > 1) {
-                    // sort by projection along p1->p2
-                    uniq->Sort(gcnew Comparison<Point2D>([&](Point2D a, Point2D b) {
-                        double ta = ((a.X - p1.X) * (p2.X - p1.X) + (a.Y - p1.Y) * (p2.Y - p1.Y));
-                        double tb = ((b.X - p1.X) * (p2.X - p1.X) + (b.Y - p1.Y) * (p2.Y - p1.Y));
-                        if (!Utils::AreEqual(ta, tb)) return (ta < tb) ? -1 : 1;
-                        return 0;
-                        }));
+                    int muniq = uniq->Count;
+                    array<double>^ tvals = gcnew array<double>(muniq);
+                    double vx = p2.X - p1.X;
+                    double vy = p2.Y - p1.Y;
+
+                    // projection scalar (not normalized) for each point
+                    for (int idx = 0; idx < muniq; idx++) {
+                        Point2D a = uniq[idx];
+                        tvals[idx] = (a.X - p1.X) * vx + (a.Y - p1.Y) * vy;
+                    }
+
+                    // insertion sort uniq by tvals (stable and simple)
+                    for (int i = 1; i < muniq; ++i) {
+                        double keyt = tvals[i];
+                        Point2D keyp = uniq[i];
+                        int j = i - 1;
+                        while (j >= 0 && tvals[j] > keyt) {
+                            tvals[j + 1] = tvals[j];
+                            uniq[j + 1] = uniq[j];
+                            j--;
+                        }
+                        tvals[j + 1] = keyt;
+                        uniq[j + 1] = keyp;
+                    }
+
                     return uniq->ToArray();
                 }
+
 
                 // single point
                 return uniq->ToArray();

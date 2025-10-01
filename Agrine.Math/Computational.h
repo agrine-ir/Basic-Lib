@@ -44,7 +44,7 @@ namespace Agrine {
             private:
                 // helpers
                 static int CompareByXThenY(Point2D a, Point2D b);
-                static double Cross(const Point2D& O, const Point2D& A, const Point2D& B);
+                static double Cross(Point2D O, Point2D A, Point2D B);
                 static bool OnSegment(Point2D a, Point2D b, Point2D p);
                 static int Sign(double x);
                 static array<Point2D>^ UniqueSorted(array<Point2D>^ pts);
