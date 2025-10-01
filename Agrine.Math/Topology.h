@@ -66,11 +66,15 @@ namespace Agrine {
                 static double HausdorffDistance3D(array<Point3D>^ A, array<Point3D>^ B);
 
             private:
-                // small helpers
-                static array<T>^ UniqueArray<T>(array<T>^ arr);
+                // small helpers - generic functions for value types (Point2D, Point3D, ...)
                 generic<typename T>
                 where T : value class
                     static List<T>^ ToList(array<T>^ arr);
+
+                generic<typename T>
+                where T : value class
+                    static array<T>^ UniqueArray(array<T>^ arr);
+
             };
         }
     }
