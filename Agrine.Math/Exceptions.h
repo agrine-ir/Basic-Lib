@@ -61,6 +61,8 @@ namespace Agrine {
 
 			
 
+			
+
 			/// <summary>
 			/// Exception thrown when a numerical method fails to converge.
 			/// </summary>
@@ -90,6 +92,15 @@ namespace Agrine {
 					: MathException(message) {
 				}
 			};
+
+			/// <summary>
+			/// Exception for invalid arguments in math operations.
+			/// </summary>
+			public ref class InvalidArgumentException : public MathException {
+			public:
+				InvalidArgumentException(String^ message) : MathException(message) {}
+			};
+
 		}
 	}
 }
