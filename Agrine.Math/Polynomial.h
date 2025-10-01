@@ -54,7 +54,9 @@ namespace Agrine {
 
                 // ===== Advanced operations =====
                 Polynomial^ Derivative();
-                Polynomial^ Integral(double constantTerm = 0.0);
+                // Remove default argument and add overload
+                Polynomial^ Integral(double constantTerm);
+                Polynomial^ Integral(); // overload that uses 0.0 as default
                 array<double>^ Roots(); // quadratic closed form, Newton otherwise
 
                 static bool AreEqual(Polynomial^ a, Polynomial^ b, double tol = Constants::Tolerance);

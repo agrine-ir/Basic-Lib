@@ -159,6 +159,7 @@ namespace Agrine {
                 return gcnew Polynomial(result);
             }
 
+            // existing implementation (unchanged)
             Polynomial^ Polynomial::Integral(double constantTerm)
             {
                 array<double>^ result = gcnew array<double>(Degree + 2);
@@ -168,6 +169,12 @@ namespace Agrine {
                     result[i + 1] = coeffs[i] / (i + 1);
 
                 return gcnew Polynomial(result);
+            }
+
+            // new overload: no-arg integral -> calls the above with 0.0
+            Polynomial^ Polynomial::Integral()
+            {
+                return Integral(0.0);
             }
 
             array<double>^ Polynomial::Roots()
