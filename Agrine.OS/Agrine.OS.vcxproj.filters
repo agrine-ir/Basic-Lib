@@ -36,6 +36,9 @@
     <ClInclude Include="Time.h">
       <Filter>Header Files\System</Filter>
     </ClInclude>
+    <ClInclude Include="Power.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.OS.cpp">
