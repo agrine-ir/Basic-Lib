@@ -54,6 +54,9 @@
     <ClInclude Include="Personalization.h">
       <Filter>Header Files\System</Filter>
     </ClInclude>
+    <ClInclude Include="Audio.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.OS.cpp">
