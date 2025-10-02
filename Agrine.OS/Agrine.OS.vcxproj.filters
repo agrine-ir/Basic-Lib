@@ -25,6 +25,9 @@
     <Filter Include="Header Files\Network">
       <UniqueIdentifier>{e786eed3-c330-4798-9473-7262119386b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Hardware">
+      <UniqueIdentifier>{07d9ad5a-e028-4d4b-b5b9-94bc4d552ced}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.OS.h">
