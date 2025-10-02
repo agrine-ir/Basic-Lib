@@ -122,6 +122,7 @@
     <ClInclude Include="Agrine.OS.h" />
     <ClInclude Include="Information.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Personalization.h" />
     <ClInclude Include="Power.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Time.h" />
