@@ -40,9 +40,8 @@ namespace Agrine {
                 static int    PoissonSample(double lambda);
 
             private:
-                // random generator (lazy initialized)
-                static Random^ rng;
-                static Random^ GetRng();
+                // single shared RNG — defined/initialized in the header to avoid static-handle-in-cpp issues
+                static initonly Random^ rng = gcnew Random();
             };
 
         } // namespace Probability
