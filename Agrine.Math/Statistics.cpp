@@ -303,7 +303,8 @@ namespace Agrine {
                 if (nBootstrap <= 0) throw gcnew InvalidArgumentException("nBootstrap must be positive.");
 
                 int n = sample->Length;
-                MersenneTwister mt(seed == 0 ? (unsigned int)Environment::TickCount : seed);
+                Randgen::MersenneTwister mt(seed == 0 ? (unsigned int)Environment::TickCount : seed);
+
                 List<double>^ boots = gcnew List<double>(nBootstrap);
                 for (int b = 0; b < nBootstrap; ++b) {
                     // resample with replacement
@@ -355,7 +356,7 @@ namespace Agrine {
                 double x = 2.0 * p - 1.0;
                 double sign = (x < 0) ? -1.0 : 1.0;
                 double lnTerm = std::log(1.0 - x * x);
-                double first = 2.0 / (M_E * a) + lnTerm / 2.0;
+                double first = 2.0 / (Constants::E * a) + lnTerm / 2.0;
                 double second = lnTerm / a;
                 double inside = std::sqrt(first * first - second);
                 double erfinv = sign * std::sqrt(inside - first);
