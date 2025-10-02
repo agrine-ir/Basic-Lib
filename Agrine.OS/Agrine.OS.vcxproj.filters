@@ -34,6 +34,9 @@
     <Filter Include="Header Files\Apps">
       <UniqueIdentifier>{876bb940-caeb-47ad-bc44-a0a513d4dc30}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Bluetooth">
+      <UniqueIdentifier>{f071b6e7-0005-4a5b-92ca-3abfc45e8d42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.OS.h">
