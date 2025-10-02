@@ -19,6 +19,9 @@
     <Filter Include="Source Files\System">
       <UniqueIdentifier>{89bb92e9-2910-4734-852c-1c64289ae1f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Registry">
+      <UniqueIdentifier>{ed82f4e2-46a3-40cc-8d4f-e5541d327308}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.OS.h">
