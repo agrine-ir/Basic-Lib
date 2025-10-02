@@ -28,6 +28,9 @@
     <Filter Include="Header Files\Hardware">
       <UniqueIdentifier>{07d9ad5a-e028-4d4b-b5b9-94bc4d552ced}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Display">
+      <UniqueIdentifier>{5229a102-a5d4-4a1a-a134-1f0c25b4be1a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.OS.h">
