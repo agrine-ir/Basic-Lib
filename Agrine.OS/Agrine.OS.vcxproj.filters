@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Display">
       <UniqueIdentifier>{5229a102-a5d4-4a1a-a134-1f0c25b4be1a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Apps">
+      <UniqueIdentifier>{876bb940-caeb-47ad-bc44-a0a513d4dc30}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agrine.OS.h">
