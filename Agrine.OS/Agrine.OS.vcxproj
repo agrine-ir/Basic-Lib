@@ -123,6 +123,7 @@
     <ClInclude Include="Information.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Time.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agrine.OS.cpp" />
