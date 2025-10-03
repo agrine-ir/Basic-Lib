@@ -121,7 +121,7 @@
   <ItemGroup>
     <ClInclude Include="Agrine.OS.h" />
     <ClInclude Include="Audio.h" />
-    <ClInclude Include="Information.h" />
+    <ClInclude Include="About.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Personalization.h" />
     <ClInclude Include="Power.h" />
